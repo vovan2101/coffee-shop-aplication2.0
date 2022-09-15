@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %} Cart {% endblock title %} 
+
+{% block content %}
+
+{% for product in cart %}
+
+
+<section class="cart" id="cart">
+
+    <h1 class="heading"> Cart </h1>
+  
+    <div class="box-container">
+  
+  
+      <div class="box">
+        <img src="{{ product.iamge_url }}" alt="">
+        <h3>{{ product.name }}</h3>
+        <div class="price">${{ product.price }}</div>
+      </div>
+      
+  
+    </div>
+    <a href="" class="btn">Order</a>
+  </section>
+  
+
+{% endfor %}
+{% endblock content %}

@@ -1,0 +1,351 @@
+#nav {
+    text-decoration: none;
+} 
+
+:root{
+    --main-color: #d3ad7f;
+    --border:.1rem solid rgb(250, 250, 250,.3);
+
+
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+
+body{
+    background: black;
+}
+
+.header {
+    background: rgba(0, 0, 0, 0.402);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:1000;
+}
+
+.header .logo img{
+    height: 6rem;
+}
+
+.header .navbar a{
+    margin:0 1rem;
+    font-size: 1.6rem;
+    color:white;
+}
+
+.header .navbar a:hover{
+    color:var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.header .icons a{
+    color: white;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    text-decoration: none;
+}
+
+.header .icons a:hover{
+    color: var(--main-color);
+}
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(../static/pictures/bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 60rem;
+}
+
+.home .content h3{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: white;
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+.btn:hover{
+    letter-spacing: 1px;
+    color: white;
+}
+
+section{
+    padding: 2rem 10%;
+}
+
+.home .content p{
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding: 1.5rem 1;
+    color: white;
+}
+
+.form-group {
+    max-width: 40%;
+    margin-left: 30%;
+    padding: 50px;
+    margin-top: 20rem;
+    
+}
+
+.form-control {
+    border-radius: 5px;
+    height: 4rem;
+    font-size: large;
+    
+}
+
+#btn-signup {
+    border-radius: 5px;
+    margin-top: 20px;
+
+}
+
+#label {
+    color: var(--main-color);
+    
+}
+
+#signup {
+    color: var(--main-color);
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+#login {
+    color: var(--main-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.product .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+    gap:1.5rem;
+}
+
+.product .box-container .box{
+    padding: 10rem;
+    text-align: center;
+    border: var(--border);
+}
+
+.product .box-container .box img{
+    height: 12rem;
+}
+
+.product {
+    margin-top: 10rem;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 6rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.product .box-container .box h3{
+    color: white;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.product .box-container .box .price{
+    color: white;
+    font-size: 2.5rem;
+    padding: .5rem 0;
+}
+
+.product .box-container .box .price span {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+
+.product h1{
+    color:white;
+}
+
+.product h1 span{
+    color: var(--main-color);
+}
+
+.product .box-container .box:hover{
+    background: white;
+}
+
+.product .box-container .box:hover *{
+    color: black;
+}
+
+
+.product .box-container .box .btn {
+    color: white;
+}
+
+#heading{
+    text-align: center;
+    color: var(--main-color);
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+    padding-top: 10rem;
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about .row .image{
+    flex:1 1 45rem ;
+}
+
+.about .row .image img{
+    width: 100%;
+}
+
+.about .row .content{
+    flex:1 1 45rem ;
+    padding: 2rem;
+}
+
+.about .row .content h3{
+    font-size: 4.5rem;
+    padding-bottom: 2rem;
+    color: white;
+}
+
+.about .row .content p{
+    font-size: 1.6rem;
+    color: rgb(216, 208, 208);
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+#span {
+    color: white;
+}
+
+.home .content span{
+    color: var(--main-color);
+}
+
+.footer_login{
+    background: rgb(5, 5, 5);
+    text-align: center;
+    margin-top: 20rem;
+}
+
+.footer_login .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 4rem;
+    color: white;
+    border:var(--border);
+    margin: .3rem;
+    text-decoration: none;
+}
+
+.footer_login .share a:hover{
+    background-color: var(--main-color);
+}
+
+.footer_login .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 1rem;
+    text-decoration: none;
+}
+
+.footer_login .links a{
+    padding: .7rem 2rem;
+    color: white;
+    border: var(--border);
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.footer_login .links a:hover{
+    background: var(--main-color);
+}
+
+
+
+.footer_signup{
+    background: rgb(5, 5, 5);
+    text-align: center;
+    margin-top: 7rem;
+}
+
+.footer_signup .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 4rem;
+    color: white;
+    border:var(--border);
+    margin: .3rem;
+    text-decoration: none;
+}
+
+.footer_signup .share a:hover{
+    background-color: var(--main-color);
+}
+
+.footer_signup .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 1rem;
+    text-decoration: none;
+}
+
+.footer_signup .links a{
+    padding: .7rem 2rem;
+    color: white;
+    border: var(--border);
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.footer_signup .links a:hover{
+    background: var(--main-color);
+}

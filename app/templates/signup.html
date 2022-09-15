@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}Signup{% endblock title %}
+
+{% block content %}
+
+
+<section class="signup" id="home">
+<form method="post">
+    {{ form.csrf_token }}
+    <div class="form-group">
+        <h1 id="signup">SignUp</h1>
+        
+        {{ form.email.label(id='label')}}
+        {{ form.email(class='form-control mt-3', placeholder='Enter Email:') }}
+
+        {{ form.username.label(id='label') }}
+        {{ form.username(class='form-control mt-3', placeholder='Enter Username:') }}
+
+        {{ form.password.label(id='label') }}
+        {{ form.password(class='form-control mt-3', placeholder='Enter Password:') }}
+
+        {{ form.confirm_pass.label(id='label') }}
+        {{ form.confirm_pass(class='form-control mt-3', placeholder='Confirm Password:') }}
+
+        {{ form.submit(class='btn w-100', id='btn-signup') }}
+    </div>
+</form>
+</section>
+
+<section class="footer_signup">
+    <div class="share">
+        <a href="" class="fab fa-facebook-f"></a>
+        <a href="" class="fab fa-twitter"></a>
+        <a href="" class="fab fa-instagram"></a>
+        <a href="" class="fab fa-linkedin"></a>
+    </div>
+
+    <div class="links">
+        <a href="home">Home</a>
+        <a href="about">About</a>
+        <a href="products">Products</a>
+    </div>
+
+</section>
+
+{% endblock content %}
