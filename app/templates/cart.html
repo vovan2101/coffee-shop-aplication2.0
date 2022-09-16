@@ -4,27 +4,32 @@
 
 {% block content %}
 
-{% for product in cart %}
+
 
 
 <section class="cart" id="cart">
 
-    <h1 class="heading"> Cart </h1>
+    <h1 class="heading_cart"> Cart </h1>
   
     <div class="box-container">
+      {% for product in products %}
   
   
       <div class="box">
-        <img src="{{ product.iamge_url }}" alt="">
+        <img src="{{ product.image_url }}" alt="">
         <h3>{{ product.name }}</h3>
         <div class="price">${{ product.price }}</div>
+        <form action="{{ url_for('product_delete', product_id=product.id) }}" method="POST">
+            <input class="btn" type="submit" value="Delete">
+          </form>
       </div>
-      
+
+      {% endfor %}
   
     </div>
-    <a href="" class="btn">Order</a>
+    <a href="" id="order" class="btn">Order</a>
   </section>
   
 
-{% endfor %}
+
 {% endblock content %}

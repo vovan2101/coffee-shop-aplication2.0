@@ -12,14 +12,15 @@
     <title>{% block title %} {% endblock title %}</title>
     </head>
 <body>
+    
         <!-- Navbar -->
         <header class="header">
-            <a href="home" class="logo">
+            <a href="/" class="logo">
                 <img src="static/pictures/logo.png" alt="">
             </a>
 
                 <nav class="navbar">
-                    <a id='nav' href="home">Home</a>
+                    <a id='nav' href="/">Home</a>
                     <a id='nav' href="about">About</a>
                     <a id='nav' href="products">Products</a>
                     {% if current_user.is_authenticated %}
@@ -39,9 +40,11 @@
 
         <!-- Container -->
         
-        
+        {% include 'alert.html' %}
 
         {% block content %}
+    
+
         {% endblock content %}
       
 

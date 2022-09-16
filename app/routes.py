@@ -6,7 +6,7 @@ from flask_login import login_user, logout_user, login_required, current_user
 from .forms import Cart
 
 
-@app.route('/home')
+@app.route('/')
 def index():
     return render_template('index.html')
 
@@ -69,7 +69,7 @@ def add_to_cart(product_id):
     current_user.products.append(product)
     db.session.commit()
     flash(f"{product.name} was added into your cart", 'warning')
-    return render_template('/products', product=product)
+    return redirect(url_for('products'))
 
 
 @app.route('/product/delete/<int:product_id>', methods=['POST'])
@@ -79,7 +79,7 @@ def product_delete(product_id):
     current_user.products.remove(product)
     db.session.commit()
     flash(f"{product.name} has been removed from your cart", 'warning')
-    return redirect(url_for('/cart'))
+    return redirect(url_for('cart'))
 
 
 @app.route('/products')
@@ -95,4 +95,5 @@ def about():
 
 @app.route('/cart')
 def cart():
-    return render_template('cart.html')
+    products = current_user.products
+    return render_template('cart.html', products=products)

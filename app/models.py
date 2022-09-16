@@ -11,10 +11,15 @@ class User(db.Model, UserMixin):
     password = db.Column(db.String(256), nullable=False)
     products = db.relationship('Product', secondary='cart')
 
-    def __init__(self, username, email, password):
-        self.username = username
-        self.email = email
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.set_password(kwargs['password'])
+        db.session.add(self)
+        db.session.commit()
+    
+    def set_password(self, password):
         self.password = generate_password_hash(password)
+        db.session.commit()
        
 
     def check_password(self, password):
