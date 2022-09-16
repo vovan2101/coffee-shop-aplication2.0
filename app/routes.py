@@ -97,3 +97,5 @@ def about():
 def cart():
     products = current_user.products
     return render_template('cart.html', products=products)
+    
+
