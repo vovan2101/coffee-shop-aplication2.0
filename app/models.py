@@ -36,12 +36,15 @@ class Product(db.Model):
     name = db.Column(db.String(200))
     price = db.Column(db.String(300))
     image_url = db.Column(db.String(300))
+    description = db.Column(db.String(500))
     users = db.relationship('User', secondary='cart')
+    
 
-    def __init__(self, name, price, image_url):
+    def __init__(self, name, price, image_url, description):
         self.name = name
         self.price = price
         self.image_url = image_url
+        self.description = description
     
     def __repr__(self):
         return f'<Product: {self.name}>'

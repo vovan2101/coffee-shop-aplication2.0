@@ -18,7 +18,10 @@
       <h3>{{ product.name }}</h3>
       <div class="price">${{ product.price }} <span>$7.99</span></div>
       <form action="{{ url_for('add_to_cart', product_id=product.id) }}" method="POST">
-        <input class="btn" type="submit" value="Add to cart">
+        <input class="btn_add" type="submit" value="Add to cart">
+      </form>
+      <form action="{{ url_for('add_description', product_id=product.id) }}" method="POST">
+        <input class="btn_learn" type="submit" value="Learn More">
       </form>
 
     </div>

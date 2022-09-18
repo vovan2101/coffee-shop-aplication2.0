@@ -17,6 +17,7 @@ class Cart(FlaskForm):
     name = StringField('Name', validators=[DataRequired()])
     price = StringField('Price', validators=[DataRequired()])
     image = StringField('Image', validators=[DataRequired()])
+    description = StringField('Description', validators=[DataRequired()])
 
 
 class LoginForm(FlaskForm):

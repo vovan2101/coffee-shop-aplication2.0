@@ -89,9 +89,30 @@ body{
     color: white;
     background: var(--main-color);
     cursor: pointer;
+
 }
 
 .btn:hover{
+    letter-spacing: 1px;
+    color: white;
+}
+
+
+.btn_add {
+    float: left;
+    margin-top: 1rem;
+    display: block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: white;
+    background: var(--main-color);
+    cursor: pointer;
+    margin-left: 4rem;
+    border: none;
+    border-radius: 3px;
+}
+
+.btn_add:hover{
     letter-spacing: 1px;
     color: white;
 }
@@ -210,9 +231,31 @@ section{
     color: black;
 }
 
-.product .box-container .box .btn {
-    color: white;
+.product .box-container .box:hover span{
+    color: black;
+}
 
+.product .box-container .box .btn_add {
+    color: white;
+}
+
+.product .box-container .box .btn_learn {
+    float: right;
+    margin-top: 1rem;
+    display: block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: white;
+    background: var(--main-color);
+    cursor: pointer;
+    margin-right: 4rem;
+    border: none;
+    border-radius: 3px;
+}
+
+.btn_learn:hover{
+    letter-spacing: 1px;
+    color: white;
 }
 
 #heading{
@@ -414,8 +457,11 @@ section{
 
 }
 
+
+
 #order {
     display: flex;
     justify-content: center;
 }
+
 

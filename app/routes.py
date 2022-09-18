@@ -97,5 +97,10 @@ def about():
 def cart():
     products = current_user.products
     return render_template('cart.html', products=products)
-    
 
+
+@app.route('/description/<int:product_id>', methods=['POST'])
+def add_description(product_id):
+    product = Product.query.get_or_404(product_id)
+    db.session.commit()
+    return render_template('description.html', product=product)

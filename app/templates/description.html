@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %} Description {% endblock title %} 
+
+{% block content %}
+
+
+
+<section class="Description" id="Description">
+
+    <h1 id='heading' class="heading"><span id="span">about</span> {{product.name}} </h1>
+    <div class="row">
+
+        <div class="image">
+            <img src="{{product.image_url}}" alt="">
+        </div>
+
+        <div class="content">
+            <h3>What makes our coffee special?</h3>
+            <p>{{product.description}}</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+{% endblock content %}
