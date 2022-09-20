@@ -24,11 +24,14 @@
           </form>
       </div>
 
-      {% endfor %}
-  
-     
+      {% endfor %}   
+
     </div>
-    
+
+    <div action="{{ url_for('my_product') }}">
+        <h1>{{ total }}</h1>
+    </div>
+
       {% if products %}
     <a href="" id="order" class="btn">Order</a>
       {% endif %}
